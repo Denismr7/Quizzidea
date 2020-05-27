@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 99vw;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("img/nBackground.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+section {
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h2 {
+  font-size: 5rem;
+  color: #545479;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1% 4%;
+  font-size: 3rem;
+  color: #545479;
+}
+
+nav #nav__logo {
+  width: 10rem;
+}
+
+nav #nav__logo img {
+  width: 100%;
+}
+
+nav #nav__sections {
+  list-style: none;
+  font-size: 2rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav #nav__sections li {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav #nav__sections li:hover {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#home {
+  margin-left: 10%;
+  margin-bottom: 20%;
+}
+
+#home__title {
+  font-size: 6rem;
+  font-weight: normal;
+  color: #3f3f5b;
+}
+
+#home .button {
+  height: 5rem;
+  width: 15rem;
+  margin-right: 3rem;
+  border: 3px solid #4BD2CB;
+  background: #3CABA5;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#home .button:hover {
+  background: #359893;
+  border-color: #5fd7d1;
+}
+
+#howitworks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70vh;
+}
+
+#howitworks__img {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#howitworks__img img {
+  width: 80%;
+}
+
+#howitworks__textblock {
+  height: 100%;
+  width: 50%;
+}
+
+#howitworks__textblock h2 {
+  text-align: right;
+}
+
+#howitworks__textblock p {
+  padding-left: 20%;
+  font-size: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: right;
+}
+
+#proposal {
+  position: relative;
+  height: 80vh;
+}
+
+#proposal h2 {
+  position: absolute;
+  left: 2rem;
+}
+
+#proposal__container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 7.5rem;
+  width: 100%;
+  height: 90%;
+  background-color: #009DF8;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+#proposal__container #line {
+  content: "";
+  position: absolute;
+  left: 33%;
+  top: 20%;
+  width: 2px;
+  height: 60%;
+  background-color: #79ceff;
+}
+
+#proposal__container::after {
+  content: "";
+  position: absolute;
+  left: 66%;
+  top: 20%;
+  width: 2px;
+  height: 60%;
+  background-color: #79ceff;
+}
+
+#proposal__container .item {
+  width: 33%;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#proposal__container .item img {
+  width: 100px;
+}
+
+#proposal__container .item h3 {
+  font-size: 3rem;
+  color: #545479;
+}
+
+#proposal__container .item p {
+  font-size: 2rem;
+  color: #545479;
+}
+
+#pricing {
+  height: 80vh;
+}
+
+#pricing h2 {
+  text-align: right;
+}
+
+#pricing__pricescont {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  margin-top: 6%;
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1%;
+          column-gap: 1%;
+  height: 80%;
+}
+
+#pricing__pricescont::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 5px;
+  opacity: 0.3;
+  background-color: #3CABA5;
+  z-index: -1;
+}
+
+#pricing__pricescont #recommended {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  background-color: rgba(0, 157, 248, 0.3);
+  bottom: 5%;
+  right: 5%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#pricing__pricescont #recommended:hover {
+  background-color: rgba(0, 157, 248, 0.6);
+}
+
+#pricing__pricescont .pricing__pricescont__item {
+  width: 90%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: #545479;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: rgba(0, 157, 248, 0.2);
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#pricing__pricescont .pricing__pricescont__item:hover {
+  background-color: rgba(0, 157, 248, 0.6);
+}
+
+#pricing__pricescont .pricing__pricescont__item h3 {
+  font-size: 2rem;
+}
+
+#pricing__pricescont .pricing__pricescont__item h4 {
+  font-size: 3rem;
+}
+
+#pricing__pricescont .pricing__pricescont__item h4 .price {
+  font-size: 8rem;
+  color: #3CABA5;
+}
+
+#pricing__pricescont .pricing__pricescont__item button {
+  width: 13rem;
+  height: 5rem;
+  background-color: #3CABA5;
+  border: 1px solid #43bdb7;
+  font-size: 2rem;
+  color: whitesmoke;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#pricing__pricescont .pricing__pricescont__item button:hover {
+  background-color: #2f8581;
+}
+
+#contact {
+  height: 80vh;
+}
+/*# sourceMappingURL=styles.css.map */
