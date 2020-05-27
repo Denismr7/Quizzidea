@@ -489,6 +489,9 @@ nav #nav__sections li:hover {
   h2 {
     margin-top: 2%;
   }
+  nav #nav__sections li {
+    padding-left: 5rem;
+  }
   #home {
     margin-top: 0;
     position: relative;
@@ -516,9 +519,77 @@ nav #nav__sections li:hover {
   #pricing, #contact, #proposal {
     height: 50vh;
   }
+  #pricing {
+    margin-top: 2rem;
+  }
   #contact__left .fas {
     position: initial;
     padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 38%;
+  }
+  nav {
+    display: none;
+  }
+  section {
+    margin-bottom: 20%;
+  }
+  #background {
+    background: url("./img/MobileBack.svg");
+    background-repeat: no-repeat;
+  }
+  #howitworks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  #howitworks__textblock {
+    width: 90%;
+  }
+  #howitworks__textblock p {
+    text-align: center;
+  }
+  #howitworks__img {
+    width: 100%;
+    -ms-flex-item-align: initial;
+        -ms-grid-row-align: initial;
+        align-self: initial;
+    margin-top: 3rem;
+  }
+  #howitworks__img img {
+    width: 100%;
+  }
+  #proposal h2 {
+    left: 0;
+  }
+  #proposal__container {
+    height: 75vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  #proposal__container .item {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  #proposal__container .item img {
+    width: 35px;
+  }
+  #proposal__container #line {
+    display: none;
+  }
+  #proposal__container::after {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

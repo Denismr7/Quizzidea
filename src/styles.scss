@@ -391,6 +391,13 @@ nav {
     h2 {
         margin-top: 2%;
     }
+    nav {
+        #nav__sections {
+            li {
+                padding-left: 5rem;
+            }
+        }
+    }
     #home {
         margin-top: 0;
         position: relative;
@@ -416,11 +423,72 @@ nav {
     #pricing, #contact, #proposal {
         height: 50vh;
     }
+    #pricing {
+        margin-top: 2rem;
+    }
     #contact {
         &__left {
             .fas {
                 position: initial;
                 padding-right: 2rem;
+            }
+        }
+    }
+}
+
+// Mobile media query
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 38%;
+    }
+    nav { // Needs an hamburger menu or a redesign
+        display: none;
+    }
+    section {
+        margin-bottom: 20%;
+    }
+    #background {
+        background: url('./img/MobileBack.svg');
+        background-repeat: no-repeat;
+    }
+    #howitworks {
+        flex-direction: column-reverse;
+        text-align: center;
+        &__textblock {
+            width: 90%;
+            p {
+                text-align: center;
+            }
+        }
+        &__img {
+            width: 100%;
+            align-self: initial;
+            margin-top: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #proposal {
+        h2 {
+            left: 0;
+        }
+        &__container {
+            height: 75vh;
+            flex-direction: column;
+            justify-content: start;
+            .item {
+                width: 90%;
+                margin-top: 2rem;
+                img {
+                    width: 35px;
+                }
+            }
+            #line {
+                display: none;
+            }
+            &::after {
+                display: none;
             }
         }
     }
