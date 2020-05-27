@@ -58,12 +58,12 @@ nav {
     #nav__sections {
         list-style: none;
         font-size: 2rem;
-        width: 50%;
         display: flex;
         justify-content: space-evenly;
         li {
             transition: $transition;
             position: relative;
+            padding-left: 10rem;
             &:hover {
                 color: whitesmoke;
                 cursor: pointer;
@@ -100,7 +100,7 @@ nav {
 }
 #howitworks {
     display: flex;
-    height: 70vh;
+    min-height: 70vh;
     &__img {
         width: 50%;
         align-self: center;
@@ -187,9 +187,9 @@ nav {
         display: grid;
         position: relative;
         margin-top: 6%;
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: repeat(3, auto);
         justify-content: center;
-        column-gap: 1%;
+        column-gap: 3rem;
         height: 80%;
         &::after {
             content: "";
@@ -202,20 +202,20 @@ nav {
             z-index: -1;
         }
         #recommended {
-            width: 100%;
-            height: 80%;
+            width: 29.8rem;
+            height: 47.9rem;
             position: relative;
             background-color: rgba(0, 157, 248, 0.3);
             bottom: 5%;
-            right: 5%;
+            right: 0%;
             transition: $transition;
             &:hover {
                 background-color: rgba(0, 157, 248, 0.6);
             }
         }
         .pricing__pricescont__item {
-            width: 90%;
-            height: 70%;
+            width: 26.9rem;
+            height: 41.8rem;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -259,6 +259,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
+    margin-bottom: 6%;
     h2 {
         grid-column: 1/3;
     }
@@ -286,7 +287,7 @@ nav {
         .fas {
             margin-right: 10%;
             position: absolute;
-            left: 20%;
+            left: 15rem;
         }
     }
     &__right {
@@ -324,8 +325,8 @@ nav {
             }
             div {
                 button {
-                    margin-top: 2%;
-                    width: 30%;
+                    margin-top: 1.5rem;
+                    width: 15rem;
                     height: 5rem;
                     font-size: 2rem;
                     background-color: $blue;
@@ -350,5 +351,36 @@ nav {
                 }
             }
     }
+    }
+}
+
+// Tablet media query
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 51%;
+    }
+    h2 {
+        margin-top: 5%;
+    }
+    #home {
+        margin-bottom: inherit;
+    }
+    #pricing {
+        &__pricescont {
+            column-gap: 5px;
+        }
+    }
+    #contact {
+        &__left {
+            .fas {
+                left: 6rem;
+            }
+        }
+        &__right {
+            form {
+                top: 0;
+                left: 5rem;
+            }
+        }
     }
 }

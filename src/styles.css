@@ -65,7 +65,6 @@ nav #nav__logo img {
 nav #nav__sections {
   list-style: none;
   font-size: 2rem;
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +77,7 @@ nav #nav__sections li {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
+  padding-left: 10rem;
 }
 
 nav #nav__sections li:hover {
@@ -121,7 +121,7 @@ nav #nav__sections li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
+  min-height: 70vh;
 }
 
 #howitworks__img {
@@ -240,13 +240,13 @@ nav #nav__sections li:hover {
   display: grid;
   position: relative;
   margin-top: 6%;
-  -ms-grid-columns: (300px)[3];
-      grid-template-columns: repeat(3, 300px);
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 1%;
-          column-gap: 1%;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
   height: 80%;
 }
 
@@ -262,12 +262,12 @@ nav #nav__sections li:hover {
 }
 
 #pricing__pricescont #recommended {
-  width: 100%;
-  height: 80%;
+  width: 29.8rem;
+  height: 47.9rem;
   position: relative;
   background-color: rgba(0, 157, 248, 0.3);
   bottom: 5%;
-  right: 5%;
+  right: 0%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -277,8 +277,8 @@ nav #nav__sections li:hover {
 }
 
 #pricing__pricescont .pricing__pricescont__item {
-  width: 90%;
-  height: 70%;
+  width: 26.9rem;
+  height: 41.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,6 +341,7 @@ nav #nav__sections li:hover {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto 1fr;
       grid-template-rows: auto 1fr;
+  margin-bottom: 6%;
 }
 
 #contact h2 {
@@ -379,7 +380,7 @@ nav #nav__sections li:hover {
 #contact__left .fas {
   margin-right: 10%;
   position: absolute;
-  left: 20%;
+  left: 15rem;
 }
 
 #contact__right {
@@ -431,8 +432,8 @@ nav #nav__sections li:hover {
 }
 
 #contact__right form div button {
-  margin-top: 2%;
-  width: 30%;
+  margin-top: 1.5rem;
+  width: 15rem;
   height: 5rem;
   font-size: 2rem;
   background-color: #009DF8;
@@ -456,5 +457,28 @@ nav #nav__sections li:hover {
   font-size: 1.35rem;
   color: #3CABA5;
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 51%;
+  }
+  h2 {
+    margin-top: 5%;
+  }
+  #home {
+    margin-bottom: inherit;
+  }
+  #pricing__pricescont {
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+  }
+  #contact__left .fas {
+    left: 6rem;
+  }
+  #contact__right form {
+    top: 0;
+    left: 5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
