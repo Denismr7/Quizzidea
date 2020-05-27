@@ -385,6 +385,76 @@ nav #nav__sections li:hover {
 #contact__right {
   width: 100%;
   height: 100%;
-  background-color: royalblue;
+  position: relative;
+}
+
+#contact__right form {
+  position: absolute;
+  top: 10%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact__right form label {
+  font-size: 2rem;
+  margin-bottom: 2%;
+  color: #545479;
+  font-family: "Open Sans", sans-serif;
+}
+
+#contact__right form .input, #contact__right form #message {
+  border-radius: 5px;
+  border: 2px dashed #009DF8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-left: 3%;
+  font-size: 2rem;
+}
+
+#contact__right form .input:hover, #contact__right form #message:hover {
+  border: 2px solid #009DF8;
+}
+
+#contact__right form .input:focus, #contact__right form #message:focus {
+  border: 2px solid #009DF8;
+}
+
+#contact__right form .input {
+  margin-bottom: 6%;
+  height: 4rem;
+}
+
+#contact__right form div button {
+  margin-top: 2%;
+  width: 30%;
+  height: 5rem;
+  font-size: 2rem;
+  background-color: #009DF8;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#contact__right form div button .fa-paper-plane {
+  padding-left: 25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#contact__right form div button:hover .fa-paper-plane {
+  color: #b5b5b5;
+}
+
+#contact__right form div span {
+  padding-left: 25px;
+  font-size: 1.35rem;
+  color: #3CABA5;
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

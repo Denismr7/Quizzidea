@@ -292,6 +292,63 @@ nav {
     &__right {
         width: 100%;
         height: 100%;
-        background-color: royalblue;
+        position: relative;
+        form {
+            position: absolute;
+            top: 10%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            label {
+                font-size: 2rem;
+                margin-bottom: 2%;
+                color: $gray;
+                font-family: $secondaryFont;
+            }
+            .input, #message {
+                border-radius: 5px;
+                border: 2px dashed $blue;
+                transition: $transition;
+                padding-left: 3%;
+                font-size: 2rem;
+                &:hover {
+                    border: 2px solid $blue;
+                }
+                &:focus {
+                    border: 2px solid $blue;
+                }
+            }
+            .input {
+                margin-bottom: 6%;
+                height: 4rem;
+            }
+            div {
+                button {
+                    margin-top: 2%;
+                    width: 30%;
+                    height: 5rem;
+                    font-size: 2rem;
+                    background-color: $blue;
+                    border: none;
+                    color: whitesmoke;
+                    cursor: pointer;
+                    .fa-paper-plane {
+                        padding-left: 25px;
+                        transition: $transition;
+                    }
+                    &:hover {
+                        .fa-paper-plane {
+                            color: darken($color: whitesmoke, $amount: 25);
+                        }
+                    }
+                }
+                span {
+                    padding-left: 25px;
+                    font-size: 1.35rem;
+                    color: $green;
+                    display: none;
+                }
+            }
+    }
     }
 }
