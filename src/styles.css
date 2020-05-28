@@ -40,6 +40,9 @@ section {
 h2 {
   font-size: 5rem;
   color: #545479;
+  background-color: #4BD2CB;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 nav {
@@ -544,7 +547,7 @@ nav #nav__sections li:hover {
   #background {
     background: url("./img/MobileBack.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
   }
   #howitworks {
     -webkit-box-orient: vertical;
@@ -554,9 +557,10 @@ nav #nav__sections li:hover {
     text-align: center;
   }
   #howitworks__textblock {
-    width: 90%;
+    width: 100%;
   }
   #howitworks__textblock p {
+    padding-left: 0;
     text-align: center;
   }
   #howitworks__img {
@@ -573,7 +577,7 @@ nav #nav__sections li:hover {
     height: 75vh;
   }
   #proposal h2 {
-    left: 0;
+    position: static;
   }
   #proposal__container {
     height: 75vh;

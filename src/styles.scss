@@ -42,6 +42,9 @@ section {
 h2 {
     font-size: 5rem;
     color: $gray;
+    background-color: $lightgreen;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 nav {
     display: flex;
@@ -453,14 +456,15 @@ nav {
     #background {
         background: url('./img/MobileBack.svg');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: auto;
     }
     #howitworks {
         flex-direction: column-reverse;
         text-align: center;
         &__textblock {
-            width: 90%;
+            width: 100%;
             p {
+                padding-left: 0;
                 text-align: center;
             }
         }
@@ -476,7 +480,7 @@ nav {
     #proposal {
         height: 75vh;
         h2 {
-            left: 0;
+            position: static;
         }
         &__container {
             height: 75vh;
