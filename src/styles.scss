@@ -12,8 +12,38 @@ $secondaryFont: 'Open Sans', sans-serif;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
-
+header {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 90%;
+    #nav__logo {
+        flex: 1;
+    }
+    #nav__sections {
+        flex: 2;
+        input[type="checkbox"] {
+            display: none;
+        } 
+        label {
+            display: none;
+            img {
+                width: 20px;
+            }
+        }
+        ul {
+            display: flex;
+            text-align: right;
+            list-style-type: none;
+            li {
+                font-size: 2rem;
+                flex: 1;
+            }
+        }
+    }
+}
 body {
     width: 99vw;
     margin: 0;
@@ -46,34 +76,9 @@ h2 {
     padding: 0.5rem;
     border-radius: 5px;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1% 4%;
-    font-size: 3rem;
-    color: $gray;
-    #nav__logo {
-        width: 10rem;
-        img {
-            width: 100%;
-        }
-    }
-    #nav__sections {
-        list-style: none;
-        font-size: 2rem;
-        display: flex;
-        justify-content: space-evenly;
-        li {
-            transition: $transition;
-            position: relative;
-            padding-left: 10rem;
-            &:hover {
-                color: whitesmoke;
-                cursor: pointer;
-            }
-        }
-    }
-}
+
+
+
 #home {
     margin-left: 10%;
     margin-bottom: 10%;
@@ -403,13 +408,8 @@ nav {
     h2 {
         margin-top: 2%;
     }
-    nav {
-        #nav__sections {
-            li {
-                padding-left: 5rem;
-            }
-        }
-    }
+
+
     #home {
         margin-top: 0;
         position: relative;
@@ -453,8 +453,26 @@ nav {
     html {
         font-size: 35%;
     }
-    nav { // Needs an hamburger menu or a redesign
-        display: none;
+    // Hamburguer menu here
+    header {
+        #nav__logo {
+            img {
+                width: 90px;
+                background-color: yellow;
+            }
+        }
+        #nav__sections {
+            label {
+                display: inherit;
+                text-align: right;
+                font-size: 5rem;
+                background-color: red;
+                cursor: pointer;
+            }
+            ul {
+                display: none;
+            }
+        }
     }
     section {
         margin-bottom: 20%;
