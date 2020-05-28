@@ -530,7 +530,7 @@ nav #nav__sections li:hover {
 
 @media screen and (max-width: 500px) {
   html {
-    font-size: 38%;
+    font-size: 35%;
   }
   nav {
     display: none;
@@ -538,9 +538,13 @@ nav #nav__sections li:hover {
   section {
     margin-bottom: 20%;
   }
+  h2 {
+    text-align: center !important;
+  }
   #background {
     background: url("./img/MobileBack.svg");
     background-repeat: no-repeat;
+    background-size: contain;
   }
   #howitworks {
     -webkit-box-orient: vertical;
@@ -564,6 +568,9 @@ nav #nav__sections li:hover {
   }
   #howitworks__img img {
     width: 100%;
+  }
+  #proposal {
+    height: 75vh;
   }
   #proposal h2 {
     left: 0;
@@ -590,6 +597,52 @@ nav #nav__sections li:hover {
   }
   #proposal__container::after {
     display: none;
+  }
+  #pricing {
+    height: 110vh;
+  }
+  #pricing__pricescont {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    row-gap: 2rem;
+  }
+  #pricing__pricescont .pricing__pricescont__item {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 1.20rem;
+  }
+  #pricing__pricescont #recommended {
+    position: static;
+  }
+  #pricing__pricescont::after {
+    height: 100%;
+    width: 5px;
+    top: 10%;
+    left: 50%;
+    opacity: 0.1;
+  }
+  #contact {
+    height: 100vh;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1fr 1.5fr;
+        grid-template-rows: auto 1fr 1.5fr;
+  }
+  #contact__right {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #contact__right form {
+    width: 90%;
+    left: 2rem;
+  }
+  #contact__right form div button {
+    width: 100%;
+    height: 8rem;
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
