@@ -492,7 +492,7 @@ nav {
             position: static;
         }
         &__container {
-            height: 75vh;
+            height: 80vh;
             flex-direction: column;
             justify-content: start;
             .item {
@@ -511,7 +511,10 @@ nav {
         }
     }
     #pricing {
-        height: 110vh;
+        height: 100vh;
+        @media (max-height: 740px) {
+            height: 114vh;
+        }
         &__pricescont {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, auto);
