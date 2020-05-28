@@ -13,14 +13,20 @@ $secondaryFont: 'Open Sans', sans-serif;
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 header {
     display: flex;
+    position: sticky;
+    top: 0;
     margin: 0 auto;
-    padding-top: 1rem;
-    width: 90%;
+    background-color: $blue;
+    width: 100vw;
+    z-index: 2;
     #nav__logo {
         flex: 1;
+        height: fit-content;
+        padding-left: 5rem;
     }
     #nav__sections {
         flex: 2;
@@ -40,6 +46,9 @@ header {
             li {
                 font-size: 2rem;
                 flex: 1;
+                &:last-child {
+                    padding-right: 5rem;
+                }
             }
         }
     }
@@ -458,19 +467,34 @@ h2 {
         #nav__logo {
             img {
                 width: 90px;
-                background-color: yellow;
             }
         }
         #nav__sections {
+            #menu:checked + ul{
+                display: block;
+                animation: $transition;
+            }
             label {
                 display: inherit;
                 text-align: right;
+                padding-right: 3rem;
                 font-size: 5rem;
-                background-color: red;
                 cursor: pointer;
             }
             ul {
                 display: none;
+                transition: $transition;
+                li {
+                    font-size: 3rem;
+                    padding: 10px;
+                    text-align: center;
+                    color: whitesmoke;
+                    transition: $transition;
+                    a {
+                        text-decoration: none;
+                        color: whitesmoke;
+                    }
+                }
             }
         }
     }

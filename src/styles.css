@@ -2,21 +2,31 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   margin: 0 auto;
-  padding-top: 1rem;
-  width: 90%;
+  background-color: #009DF8;
+  width: 100vw;
+  z-index: 2;
 }
 
 header #nav__logo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 5rem;
 }
 
 header #nav__sections {
@@ -50,6 +60,10 @@ header #nav__sections ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+header #nav__sections ul li:last-child {
+  padding-right: 5rem;
 }
 
 body {
@@ -558,17 +572,35 @@ h2 {
   }
   header #nav__logo img {
     width: 90px;
-    background-color: yellow;
+  }
+  header #nav__sections #menu:checked + ul {
+    display: block;
+    -webkit-animation: all 0.3s ease;
+            animation: all 0.3s ease;
   }
   header #nav__sections label {
     display: inherit;
     text-align: right;
+    padding-right: 3rem;
     font-size: 5rem;
-    background-color: red;
     cursor: pointer;
   }
   header #nav__sections ul {
     display: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  header #nav__sections ul li {
+    font-size: 3rem;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  header #nav__sections ul li a {
+    text-decoration: none;
+    color: whitesmoke;
   }
   section {
     margin-bottom: 20%;
