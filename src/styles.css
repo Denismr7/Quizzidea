@@ -6,6 +6,11 @@ html {
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +19,7 @@ header {
   position: sticky;
   top: 0;
   margin: 0 auto;
-  background-color: #009DF8;
+  background-color: rgba(0, 157, 248, 0.9);
   width: 100vw;
   z-index: 2;
 }
@@ -57,13 +62,27 @@ header #nav__sections ul {
 
 header #nav__sections ul li {
   font-size: 2rem;
+  padding-top: 2rem;
+  color: #545479;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: "Open Sans", sans-serif;
 }
 
 header #nav__sections ul li:last-child {
   padding-right: 5rem;
+}
+
+header #nav__sections ul li a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header #nav__sections ul li a:hover {
+  color: whitesmoke;
 }
 
 body {
@@ -575,8 +594,6 @@ h2 {
   }
   header #nav__sections #menu:checked + ul {
     display: block;
-    -webkit-animation: all 0.3s ease;
-            animation: all 0.3s ease;
   }
   header #nav__sections label {
     display: inherit;
@@ -587,16 +604,13 @@ h2 {
   }
   header #nav__sections ul {
     display: none;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    padding-left: 0;
   }
   header #nav__sections ul li {
     font-size: 3rem;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     color: whitesmoke;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
   }
   header #nav__sections ul li a {
     text-decoration: none;

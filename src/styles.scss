@@ -15,12 +15,16 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+    color: currentColor;
+}
 header {
     display: flex;
     position: sticky;
     top: 0;
     margin: 0 auto;
-    background-color: $blue;
+    background-color: rgba(0, 157, 248, 0.9);
     width: 100vw;
     z-index: 2;
     #nav__logo {
@@ -45,10 +49,20 @@ header {
             list-style-type: none;
             li {
                 font-size: 2rem;
+                padding-top: 2rem;
+                color: $gray;
                 flex: 1;
+                transition: $transition;
+                font-family: $secondaryFont;
                 &:last-child {
                     padding-right: 5rem;
                 }
+                a {
+                    transition: $transition;
+                    &:hover {
+                        color: whitesmoke;
+                    }
+            }
             }
         }
     }
@@ -472,7 +486,6 @@ h2 {
         #nav__sections {
             #menu:checked + ul{
                 display: block;
-                animation: $transition;
             }
             label {
                 display: inherit;
@@ -483,13 +496,12 @@ h2 {
             }
             ul {
                 display: none;
-                transition: $transition;
+                padding-left: 0;
                 li {
                     font-size: 3rem;
                     padding: 10px;
-                    text-align: center;
+                    text-align: left;
                     color: whitesmoke;
-                    transition: $transition;
                     a {
                         text-decoration: none;
                         color: whitesmoke;
